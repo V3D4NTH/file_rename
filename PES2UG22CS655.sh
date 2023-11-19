@@ -3,29 +3,22 @@ function rev() {
     local str="$1"
     local len=${#str}
     local reverse=""
-
     for ((i = len - 1; i >= 0; i--)); 
     do
         reverse="$reverse${str:i:1}"
     done
-
     echo "$reverse"
 }
-
 function search() {
     local dir="$1"
     local fn="$2"
-
     if [ ! -d "$dir" ]; 
     then
         echo "Directory does not exist!"
         exit 253
     fi
-
     local outcome=$(find "$dir" -type f -name "$fn")
     local hits=$(find "$dir" -type f -name "$fn" | wc -l)
-
-
     if [ $hits -eq 0 ]; 
     then
         echo "The path contains files. There are $hits number of files"
@@ -34,7 +27,6 @@ function search() {
         echo "$outcome"
     fi
 }
-
 function rename_file() {
     local dir="$1"
     local ext="$2"
@@ -47,12 +39,10 @@ function rename_file() {
         echo "$initial changed to $renamed"
     done
 }
-
 read SRN PWD DIR
 standardSRN="PES2UG22CS655"
 EXT="*.Png"
 reverse_PWD=$(rev "$PWD")
-
 if test "$SRN" = "$standardSRN"; 
 then
     if test "$reverse_PWD" = "$SRN"; 
