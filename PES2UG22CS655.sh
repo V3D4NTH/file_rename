@@ -28,9 +28,9 @@ function search() {
 
     if [ $hits -eq 0 ]; 
     then
-        echo "There are $outcome number of matches"
+        echo "The path contains files. There are $hits number of files"
     else
-        echo "There are $hits number of matches"
+        echo "There are $hits number of files in the path mentioned"
         echo "$outcome"
     fi
 }
