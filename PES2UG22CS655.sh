@@ -50,7 +50,7 @@ function rename_file() {
 
 read SRN PWD DIR
 standardSRN="PES2UG22CS___"
-EXT="*.png"
+EXT="*.Png"
 reverse_PWD=$(rev "$PWD")
 
 if test "$SRN" = "$standardSRN"; 
