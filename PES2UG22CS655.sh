@@ -49,7 +49,7 @@ function rename_file() {
 }
 
 read SRN PWD DIR
-standardSRN="PES2UG22CS___"
+standardSRN="PES2UG22CS655"
 EXT="*.Png"
 reverse_PWD=$(rev "$PWD")
 
