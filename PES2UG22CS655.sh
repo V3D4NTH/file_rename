@@ -44,6 +44,7 @@ function rename_file() {
         final=$(dirname "$file")
         renamed="${final}/${initial%$ext}.pNg"
         mv "$file" "g $file to $renamed"
+        echo "$initial changed to $renamed"
     done
 }
 
